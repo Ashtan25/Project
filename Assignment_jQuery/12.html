@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").on("click", function(){
+				alert("Clicked");		
+		});
+		
+		$("div > span").on('click',function(e){
+		e.stopPropagation();
+		});
+  });
+
+</script>
+
+</head>
+<body>
+<h1> Question 12</h1>
+<div class="parent">
+<h2>This is parent Div. (click for alert)</h2><br>
+	
+	<span id="a"> 
+	<h3> This is child Div. (click wont work)</h3>
+	</span>
+
+</div>
+
+
+</body>
+</html>

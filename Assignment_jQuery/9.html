@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title> 9</title>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"> 
+</script>
+</head>
+<body>
+<h1>Question 9</h1>
+<h3> DropDownMenu </h3>
+<div> Selected Value </div>
+<select id='dropdownid'>
+    <option value=''>Choose</option>
+    <option value='1'>A</option>
+    <option value='2'>B</option>
+    <option value='selectedvalue'>Select</option>
+    <option value='3'>A</option>
+    <option value='4'>B</option>
+    <option value='5'>C</option>
+</select>
+<script>
+$(document).ready(function() {
+var a=$(this).children("option:selected");
+$('#dropdownid').val('selectedvalue').change(function(){
+  $("option:selected").appendTo($("div"));
+});
+});
+</script>
+</body>
+</html>

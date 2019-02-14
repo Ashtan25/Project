@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").addClass("Load");
+  });
+});
+</script>
+<style>
+.Load {
+  font-size: 150%;
+  color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Question 2</h1>
+
+<p id="test">Added class "load" here.</p>
+
+<button>Add a class name to the first p element</button>
+
+</body>
+</html>

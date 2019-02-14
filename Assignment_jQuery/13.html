@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<script>
+$(document).ready(function(){ 
+$('#button1').click(function(){ 
+var highest = null;
+var hi = 0;
+$(".panel").each(function(){
+  var h = $(this).height();
+  if(h > hi){
+     hi = h;
+     highest = hi;  
+	 }
+
+});
+alert("max height is" + highest);
+$('.panel').highlight(highest);
+});
+});
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title></title>
+</head>
+<style>
+
+</style>
+<body>
+<h1> Question 13</h1>
+<div>
+    <div class="panel">
+      Line 1<br>
+      Line 2
+    </div><hr>
+    <div class="panel">
+      Line 1<br>
+      Line 2<br>
+      Line 3<br>
+      Line 4<hr>
+    </div>
+    <div class="panel">
+      Line 1
+    </div><hr>
+    <div class="panel">
+      Line 1<br>
+      Line 2
+    </div><hr>
+</div>
+<input id="button1" type="button" value="Click!" />
+ </body>
+ </html>

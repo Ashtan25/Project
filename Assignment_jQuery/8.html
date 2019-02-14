@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("#dis").click(function(){
+    $("body").append("<button>click</button>")
+	alert("Button Added Dynamically");
+  });
+  $(document).on("click", function(){
+    alert("Clicked");
+	
+  });
+});
+</script>
+
+</head>
+<body>
+<h1> Question 8</h1>
+
+<h3 id="dis">Click Here  To Add New Button Dynamically.</h3>
+
+
+
+
+</body>
+</html>

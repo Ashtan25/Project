@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+$( "div[name$='new']" ).css('background-color' , 'red'  );
+
+  });
+});
+</script>
+</head>
+<body>
+
+<h1>Question 3</h1>
+
+<div >
+	<div name="renew">
+	<h2> this div  ends with "-new"</h2>
+	</div>
+	<div name="menew">
+	<h2> this div  ends with "-new"</h2>
+	</div>
+	<div name="abc">
+	<h2> this div  doesn't ends with "-new"</h2>
+	</div>
+	<div name="def">
+	<h2> this div doesn't ends with "-new"</h2>
+	</div>
+</div>
+<button>click here</button>
+
+</body>
+</html>
