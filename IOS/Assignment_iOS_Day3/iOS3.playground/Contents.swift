@@ -4,9 +4,10 @@ import UIKit
  # Assignment Day3
  **Submitted By Ashish Singh**
  ## Initializers
-1. **Implement the parameterised initialisation with class or struct.**
+
+ 1. **Implement the parameterised initialisation with class or struct.**
 */
-/*
+
 class parameterisedInit{
     
     var name: String
@@ -20,10 +21,10 @@ class parameterisedInit{
     }
     }
 let parameter_Init = parameterisedInit(name: "Ashish",id: "1",competancy: "IOS" )
-print("Name of the Employee is " + (p.name));
-print("whose ID is " + (p.id));
-print("and whose competancy is " + (p.competancy) + " .")
-*/
+print("Name of the Employee is " + (parameter_Init.name));
+print("whose ID is " + (parameter_Init.id));
+print("and whose competancy is " + (parameter_Init.competancy) + " .")
+
 
 /*:
 2. **Write all the Rules of initialiser in Inheritance**
@@ -40,7 +41,7 @@ print("and whose competancy is " + (p.competancy) + " .")
  3. **Using convenience Initializers, write-down the Initializers for MOVIE class having basic attributes like title, author, publish_date, etc.**
  */
 
-/*
+
 class MOVIE{
     
     var title: String
@@ -64,12 +65,12 @@ class MOVIE{
 }
 let convenience_Init = MOVIE()
 print(convenience_Init.title)
-*/
+
 
 /*:
  4. **Declare a structure which can demonstrate the throwable Initializer**
  */
-/*
+
 class Employee {
     var employeeID: Int
     var employeeName: String
@@ -86,12 +87,12 @@ class Employee {
 }
 
 var emp = Employee(employeeID: -10, employeeName: "Ashish", empSal: 45000.0)
-print(emp?.employeeID )
-*/
+print(emp?.employeeID ?? 0 )
+
 
 /*:
- 
- ## 1. Create an array containing the 5 different integer values. Write at least 4 ways to do this.
+ ## Array
+ 1. **Create an array containing the 5 different integer values. Write at least 4 ways to do this.**
  
  
  ### a) Type 1
@@ -142,7 +143,7 @@ print(emp?.employeeID )
 /*:
  
  
- ## 2. Create an immutable array containing 5 city names.
+ 2. **Create an immutable array containing 5 city names.**
  
  
  ### Immutable array :-
@@ -150,7 +151,7 @@ print(emp?.employeeID )
  ### let city: [String] = ["Varanasi","Kanpur","Ghaziabad","Agra","Noida"]
  
  
- ## 3. Create an array with city 5 city names. Later add other names like Canada, Switzerland, Spain to the end of the array in at least 2 possible ways.
+ 3. **Create an array with city 5 city names. Later add other names like Canada, Switzerland, Spain to the end of the array in at least 2 possible ways.**
  
  
  ### var city: [String] = ["Varanasi","Kanpur","Ghaziabad","Agra","Noida"]
@@ -171,7 +172,7 @@ print(emp?.employeeID )
 
 /*:
  
- ## 4. Create an array with values 14, 18, 15, 16, 23, 52, 95. Replace the values 24 & 48 at 2nd & 4th index of array
+  4. **Create an array with values 14, 18, 15, 16, 23, 52, 95. Replace the values 24 & 48 at 2nd & 4th index of array**
  
  
  ### var num: [Int] = [14,18,15,16,23,52,95]
@@ -181,8 +182,11 @@ print(emp?.employeeID )
  ### num[4] = 48
  
  */
-/*:
-let houseAnimals: Set = ["🐶", "🐱"]
+/*;
+ 
+## Sets
+*/
+ let houseAnimals: Set = ["🐶", "🐱"]
 let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
 let cityAnimals: Set = ["🐭", "🦅"]
 /*:
@@ -209,11 +213,11 @@ print(notHouseAnimals)
 let allAnimals: Set = houseAnimals.union(farmAnimals).union(cityAnimals)
 print(allAnimals)
 
-*/
 /*:
  ## Dictionary
  1. **Create an empty dictionary with keys of type String and values of type Int and assign it to a variable in as many ways as you can think of (there's at least 4 ways).**
 */
+/*:
 //Type 1
  let myDiction1: Dictionary<String, Int> = [:]
 //Type 2
@@ -222,11 +226,11 @@ let myDiction2: [String: Int] = [:]
 let myDiction3 = Dictionary<String, Int>()
 //Type 4
 let myDiction4 = [String: Int]()
-
+*/
 /*:
  2. **Create a mutable dictionary named secretIdentities where the key value pairs are "Hulk" -> "Bruce Banner", "Batman" -> "Bruce Wayne", and "Superman" -> "Clark Kent".**
 */
- 
+
  var secretIdentities: [String: String] = ["Hulk": "Bruce Banner",
  "Batman": "Bruce Wayne",
  "Superman": "Clark Kent"]
@@ -245,6 +249,7 @@ print(secretIdentities)
 /*:
  4. **Print all the keys in the dic**
 */
+
 print(secretIdentities.keys)
 
 /*:
