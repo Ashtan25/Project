@@ -274,19 +274,3 @@ subscript (<parameters>) -> <return type> {
 2. **Create a simple subscript that outputs true if a string contains a substring and false otherwise.**
 
  */
-class daysofaweek {
-    private var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
-                        "Thursday", "Friday", "saturday"]
-    subscript(index: Int) -> Bool {
-        get {
-            if days[index].contains("Sunday"){
-                return true
-            }
-            else{
-                return false
-            }
-        }
-    }
-}
-var p = daysofaweek()
-print(p[0])
