@@ -156,10 +156,7 @@ print(emp?.employeeID ?? 0 )
  
  ### var city: [String] = ["Varanasi","Kanpur","Ghaziabad","Agra","Noida"]
  
- ### city.append("Canada","Switzerland","Spain")
- 
- -- **Or we can add in array in this way also**
- 
+
  ### city.append("Canada")
  
  ### city.append("Switzerland")
@@ -290,3 +287,6 @@ class Sub {
 }
 let subObj = Sub()
 print(subObj["everyone"])
+
+
+
