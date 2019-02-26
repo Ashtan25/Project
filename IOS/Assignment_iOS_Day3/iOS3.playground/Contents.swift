@@ -274,3 +274,19 @@ subscript (<parameters>) -> <return type> {
 2. **Create a simple subscript that outputs true if a string contains a substring and false otherwise.**
 
  */
+class Sub {
+    var str = "hello everyone"
+    
+    subscript (sub: String) ->Bool{
+        if str.contains(sub) {
+            return true
+            //print("yes")
+        }
+        else {
+            return false
+            //print("no")
+        }
+    }
+}
+let subObj = Sub()
+print(subObj["everyone"])
