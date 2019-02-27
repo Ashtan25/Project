@@ -71,24 +71,12 @@ print(convenience_Init.title)
  4. **Declare a structure which can demonstrate the throwable Initializer**
  */
 
-class Employee {
-    var employeeID: Int
-    var employeeName: String
-    var empSal: Double
-    
-    init?(employeeID: Int, employeeName: String, empSal: Double) {
-        if employeeID <= 0 {
-            return nil
-        }
-        self.employeeID = employeeID
-        self.employeeName = employeeName
-        self.empSal = empSal
+struct MyTestStruct {
+    var text: String
+    init() throws {
+        text = try String(/*some code here*/)
     }
 }
-
-var emp = Employee(employeeID: -10, employeeName: "Ashish", empSal: 45000.0)
-print(emp?.employeeID ?? 0 )
-
 
 /*:
  ## Array
