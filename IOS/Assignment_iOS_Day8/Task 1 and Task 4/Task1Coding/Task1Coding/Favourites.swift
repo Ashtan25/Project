@@ -8,12 +8,15 @@
 
 import UIKit
 
-class Favourites: UIPageViewController {
+class Favourites: UIViewController {
 
+    
+    @IBOutlet weak var imgView : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        imgView.layer.cornerRadius = imgView.frame.width/2
     }
     
 

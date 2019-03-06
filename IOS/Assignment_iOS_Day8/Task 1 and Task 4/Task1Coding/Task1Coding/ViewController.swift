@@ -12,19 +12,19 @@ class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewControl1 = storyBoard.instantiateViewController(withIdentifier: "Favourites")
         let viewControl2 = storyBoard.instantiateViewController(withIdentifier: "SearchView")
         let viewControl3 = storyBoard.instantiateViewController(withIdentifier: "MoreView")
 
-        
+
         viewControl1.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         viewControl2.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         viewControl3.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
-        
+
         let tabBarList = [viewControl1, viewControl2, viewControl3]
         viewControllers = tabBarList
+        
         
     }
 
