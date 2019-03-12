@@ -37,6 +37,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,
         super.viewDidLoad()
         palceOfBirthPicker.delegate = self
         palceOfBirthPicker.dataSource = self
+        privateAccountSwitch.isOn = false
         submitButton.isEnabled = false
     
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,7 +51,12 @@ class ViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,
         }
         
         
+    
+        
+        
     }
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
