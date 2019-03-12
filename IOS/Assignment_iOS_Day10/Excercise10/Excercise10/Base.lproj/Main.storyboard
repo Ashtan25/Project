@@ -274,7 +274,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-O5-y7F">
                                         <rect key="frame" x="281.5" y="0.0" width="93.5" height="119.5"/>
-                                        <state key="normal" title="="/>
+                                        <state key="normal" title="+"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV7-2J-35M">
                                         <rect key="frame" x="94" y="0.0" width="93.5" height="119.5"/>
