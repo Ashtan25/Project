@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let blackView = UIView()
         blackView.backgroundColor = .black
        
-        let noOfViews = String(inputTextField.text!)
+        let noOfViews = inputTextField.text!
         if noOfViews == "1" {
              imageHoldingStackView = UIStackView(arrangedSubviews: [redView])
             
