@@ -37,7 +37,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     @IBAction func resetFunction(_ sender: Any) {
         isTimerRunning = false
-        playPauseButton.isEnabled = true
         seconds = 0
         minutes = 0
         value = 0
@@ -47,6 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         recordTableView.reloadData()
         recordTableView.fadeOut()
+        playPauseButton.isEnabled = true
+
         
     
         
@@ -58,14 +59,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             DispatchQueue.main.async {
                 
             
-            self.recordTableView.isHidden = false
             
                 let time:[String:Any] = ["Lap Number     \(self.value)": self.stopwatchLabel!.text!]
                 self.value = self.value + 1
                 self.lap.insert(time, at: 0)
             
                 self.recordTableView.reloadData()
-                if self.recordTableView.isHidden{
+                if self.recordTableView.isHidden == true{
                 self.recordTableView.fadeIn()
                 }
             }
@@ -74,12 +74,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func playPauseFunction(_ sender: Any) {
       
-//        if(timer != nil)
-//        {
             runTimer()
         isTimerRunning = true
         playPauseButton.isEnabled = false
-      //  }
     }
     
     func runTimer(){
