@@ -65,8 +65,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.lap.insert(time, at: 0)
             
                 self.recordTableView.reloadData()
+                if self.recordTableView.isHidden{
                 self.recordTableView.fadeIn()
-            
+                }
             }
         }
     }
