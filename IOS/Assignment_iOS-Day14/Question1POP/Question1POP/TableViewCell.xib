@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="133" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Question1POP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="132.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nps-Fl-pmg">
+                        <rect key="frame" x="20" y="10" width="280" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-Nl-Be7">
+                        <rect key="frame" x="20" y="41" width="280" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-BJ-46q">
+                        <rect key="frame" x="20" y="72" width="280" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRK-mX-xdU">
+                        <rect key="frame" x="20" y="103" width="280" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nps-Fl-pmg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3Cu-4B-Yrd"/>
+                    <constraint firstItem="Drj-Nl-Be7" firstAttribute="top" secondItem="nps-Fl-pmg" secondAttribute="bottom" constant="10" id="6KJ-fG-V5H"/>
+                    <constraint firstAttribute="trailing" secondItem="nps-Fl-pmg" secondAttribute="trailing" constant="20" id="9Nz-MC-W2m"/>
+                    <constraint firstAttribute="trailing" secondItem="1BF-BJ-46q" secondAttribute="trailing" constant="20" id="Bvx-pf-5Bo"/>
+                    <constraint firstItem="FRK-mX-xdU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="FbT-nG-CgE"/>
+                    <constraint firstAttribute="trailing" secondItem="Drj-Nl-Be7" secondAttribute="trailing" constant="20" id="Hfd-7l-9tC"/>
+                    <constraint firstItem="1BF-BJ-46q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LcR-ns-SKZ"/>
+                    <constraint firstAttribute="trailing" secondItem="FRK-mX-xdU" secondAttribute="trailing" constant="20" id="WyP-8x-0jB"/>
+                    <constraint firstItem="FRK-mX-xdU" firstAttribute="top" secondItem="1BF-BJ-46q" secondAttribute="bottom" constant="10" id="bdm-sJ-hcD"/>
+                    <constraint firstAttribute="bottom" secondItem="FRK-mX-xdU" secondAttribute="bottom" constant="8.5" id="eG5-KV-hJS"/>
+                    <constraint firstItem="Drj-Nl-Be7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="g2U-WU-7cL"/>
+                    <constraint firstItem="nps-Fl-pmg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rlj-FZ-ISZ"/>
+                    <constraint firstItem="1BF-BJ-46q" firstAttribute="top" secondItem="Drj-Nl-Be7" secondAttribute="bottom" constant="10" id="t0d-fR-DcH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="Drj-Nl-Be7" id="tOy-B2-ZeH"/>
+                <outlet property="emailLabel" destination="FRK-mX-xdU" id="tP9-MO-tJi"/>
+                <outlet property="nameLabel" destination="nps-Fl-pmg" id="0W2-Qg-hdX"/>
+                <outlet property="phoneLabel" destination="1BF-BJ-46q" id="VcK-yk-QHM"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="137.61160714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
