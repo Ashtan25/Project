@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Localization
+
+  Created by Ashish Singh on 09/04/19.
+  Copyright © 2019 Ashish Singh. All rights reserved.
+*/
+"nameLabel" = "Nombre";
+"stateLabel" = "Estado";
+"countryLabel" = "País";
+"dateOfBirthLabel" = "Fecha de nacimiento";
+"lotteryWonLabel" = "Lotería ganada";

@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Lottery Won"; ObjectID = "3VW-FA-Zkf"; */
+"3VW-FA-Zkf.text" = "Lottery Won";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "4cV-5z-HxT"; */
+"4cV-5z-HxT.text" = "Country";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "QFy-7g-HqT"; */
+"QFy-7g-HqT.text" = "State";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "mJm-eR-Byy"; */
+"mJm-eR-Byy.text" = "Name";
+
+/* Class = "UILabel"; text = "Date Of Birth"; ObjectID = "vzM-3K-cyW"; */
+"vzM-3K-cyW.text" = "Date Of Birth";
