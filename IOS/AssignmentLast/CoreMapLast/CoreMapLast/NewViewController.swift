@@ -43,7 +43,7 @@ class NewViewController: UIViewController {
     func checkLocationAuth(){
         switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
-            print(mapView)
+            
             mapView.showsUserLocation = true
             centerUserLocation()
             locationManager.stopUpdatingLocation()
@@ -57,6 +57,7 @@ class NewViewController: UIViewController {
             
         case .authorizedAlways:
             break
+        
         }
     }
     
@@ -83,7 +84,7 @@ class NewViewController: UIViewController {
     @IBAction func showImage(_ sender: Any) {
       
         checkLocationOn()
-        print(countryCode)
+       
         if countryCode! == "US"{
             let url = URL(string:
                 "http://www.newsonair.com/writereaddata/News_Pictures/NAT/2018/Nov/NPIC-201811142185.jpg")
