@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMapLast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mapKitView" destination="XfR-pZ-7Hc" id="kqm-k9-1xg"/>
+                        <outlet property="mapView" destination="XfR-pZ-7Hc" id="lb6-JE-ckB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,6 +64,13 @@
                                     <action selector="showImage:" destination="x81-Sq-DG0" eventType="touchUpInside" id="Wig-1V-L0l"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-SS-uHc">
+                                <rect key="frame" x="87" y="641" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="x81-Sq-DG0" id="Y7B-zm-klc"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,11 +86,12 @@
                     <navigationItem key="navigationItem" id="mqh-dN-coK"/>
                     <connections>
                         <outlet property="imageView" destination="s5o-rs-nLe" id="bSK-c5-ZfT"/>
+                        <outlet property="mapView" destination="TZa-SS-uHc" id="2yC-ii-vQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg7-ER-Eua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="-13"/>
+            <point key="canvasLocation" x="1348" y="-13"/>
         </scene>
     </scenes>
 </document>

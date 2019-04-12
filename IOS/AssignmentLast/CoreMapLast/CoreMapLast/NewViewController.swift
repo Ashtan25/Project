@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
+
 
 class NewViewController: UIViewController {
-    let controller = ViewController()
+    
     let countryCode = Locale.current.regionCode
+    let locationManager = CLLocationManager()
+    let regionMeters: Double = 10000
+    
+    @IBOutlet weak var mapView: MKMapView!
     
 
     @IBOutlet weak var imageView: UIImageView!
@@ -19,20 +26,78 @@ class NewViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                checkLocationOn()
+        
+    }
+
+    
+    func centerUserLocation(){
+        if let location = locationManager.location?.coordinate{
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: regionMeters, longitudinalMeters: regionMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func checkLocationAuth(){
+        switch CLLocationManager.authorizationStatus(){
+        case .authorizedWhenInUse:
+            print(mapView)
+            mapView.showsUserLocation = true
+            centerUserLocation()
+            locationManager.stopUpdatingLocation()
+            break
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            break
+            
+        case .authorizedAlways:
+            break
+        }
+    }
+    
+    func setupLocationManage(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    
+    
+    func checkLocationOn(){
+        if CLLocationManager.locationServicesEnabled(){
+            setupLocationManage()
+            checkLocationAuth()
+        }
+            
+        else{
+            
+        }
+    }
+    
   
     
     @IBAction func showImage(_ sender: Any) {
       
-        controller.checkLocationOn()
+        checkLocationOn()
         print(countryCode)
         if countryCode! == "US"{
-            let imageUrlString = "http://www.newsonair.com/writereaddata/News_Pictures/NAT/2018/Nov/NPIC-201811142185.jpg"
-            let imageUrl:URL = URL(string: imageUrlString)!
+            let url = URL(string:
+                "http://www.newsonair.com/writereaddata/News_Pictures/NAT/2018/Nov/NPIC-201811142185.jpg")
             
-                let imageData:NSData = NSData(contentsOf: imageUrl)!
-          
-                let image = UIImage(data: imageData as Data)
-                imageView.image = image
+            let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async() {
+                    let imageN = UIImage(data: data)
+                    self.imageView.image = imageN
+                }
+                
+            }
+            
+            task.resume()
             
             
         
@@ -46,3 +111,22 @@ class NewViewController: UIViewController {
     
    
 }
+
+extension NewViewController: CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else{ return }
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionMeters, longitudinalMeters: regionMeters)
+        mapView.setRegion(region, animated: true)
+        
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuth()
+        
+    }
+    
+}
+
