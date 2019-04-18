@@ -38,6 +38,7 @@ extension UILabel: ToPresentToast{
         self.backgroundColor = UIColor.cyan
         self.clipsToBounds = true
         self.text = label
+        self.alpha = 1.0
         UIView.animate(withDuration: 3, delay: 3.0, options: .transitionFlipFromTop, animations: {self.alpha = 0.0} , completion: {(isCompleted) in
             
         })
