@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LSP-AQ-xde">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="STR-oq-mRg">
+            <objects>
+                <viewController id="LSP-AQ-xde" customClass="ViewController" customModule="CoreMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vb2-k4-mbR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-9e-PRs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LSP-AQ-xde" id="1cb-pE-vT7"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3bx-9e-PRs" firstAttribute="leading" secondItem="MH2-Zz-8vM" secondAttribute="leading" id="392-ji-ATF"/>
+                            <constraint firstAttribute="bottom" secondItem="3bx-9e-PRs" secondAttribute="bottom" id="7jY-h0-Ezk"/>
+                            <constraint firstItem="3bx-9e-PRs" firstAttribute="top" secondItem="Vb2-k4-mbR" secondAttribute="top" id="PL8-PV-u8i"/>
+                            <constraint firstAttribute="trailing" secondItem="3bx-9e-PRs" secondAttribute="trailing" id="mwZ-eM-7rK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MH2-Zz-8vM"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="3bx-9e-PRs" id="PDd-F5-QXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dS2-LR-olv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="72"/>
+        </scene>
+        <!--Another View Controller-->
+        <scene sceneID="p46-00-exu">
+            <objects>
+                <viewController storyboardIdentifier="AnotherViewController" id="O9t-fF-0SO" customClass="AnotherViewController" customModule="CoreMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZ4-fY-NQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="125558.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-Qp-0Y3">
+                                <rect key="frame" x="20" y="166" width="374" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="dGQ-yI-OTn"/>
+                                    <constraint firstAttribute="width" constant="374" id="iah-8h-oAD"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-L5-N7w">
+                                <rect key="frame" x="20" y="519" width="374" height="294"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2RA-pa-LaX" firstAttribute="trailing" secondItem="QMK-L5-N7w" secondAttribute="trailing" constant="20" id="1gw-Ik-Ax1"/>
+                            <constraint firstItem="QMK-L5-N7w" firstAttribute="leading" secondItem="2RA-pa-LaX" secondAttribute="leading" constant="20" id="CUc-sH-5bA"/>
+                            <constraint firstItem="2RA-pa-LaX" firstAttribute="trailing" secondItem="E8R-Qp-0Y3" secondAttribute="trailing" constant="20" id="GaJ-03-gub"/>
+                            <constraint firstItem="E8R-Qp-0Y3" firstAttribute="top" secondItem="2RA-pa-LaX" secondAttribute="top" constant="122" id="LoT-XM-jIl"/>
+                            <constraint firstItem="QMK-L5-N7w" firstAttribute="top" secondItem="E8R-Qp-0Y3" secondAttribute="bottom" constant="81" id="lBM-UD-UaD"/>
+                            <constraint firstItem="2RA-pa-LaX" firstAttribute="bottom" secondItem="QMK-L5-N7w" secondAttribute="bottom" constant="49" id="m0l-D3-47q"/>
+                            <constraint firstItem="E8R-Qp-0Y3" firstAttribute="leading" secondItem="2RA-pa-LaX" secondAttribute="leading" constant="20" id="vCq-OI-hVy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2RA-pa-LaX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBf-xG-Kdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753.62318840579712" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="125558.jpg" width="1920" height="1080"/>
+    </resources>
+</document>
