@@ -13,7 +13,7 @@ import MapKit
 
 class NewViewController: UIViewController {
     
-    let countryCode = Locale.current.regionCode
+   
     let locationManager = CLLocationManager()
     let regionMeters: Double = 10000
     
@@ -82,12 +82,14 @@ class NewViewController: UIViewController {
   
     
     @IBAction func showImage(_ sender: Any) {
-      
+        let countryLocale = NSLocale.current
+        let countryCode = countryLocale.regionCode
+        let country = (countryLocale as NSLocale).displayName(forKey: NSLocale.Key.countryCode, value: countryCode)
+        print(countryCode, country)
         checkLocationOn()
        
-        if countryCode! == "US"{
-            let url = URL(string:
-                "http://www.newsonair.com/writereaddata/News_Pictures/NAT/2018/Nov/NPIC-201811142185.jpg")
+        if (countryCode == "US") && (country == "United States"){
+            let url = URL(string:            "http://www.newsonair.com/writereaddata/News_Pictures/NAT/2018/Nov/NPIC-201811142185.jpg")
             
             let task = URLSession.shared.dataTask(with: url!) { data, response, error in
                 guard let data = data, error == nil else { return }
