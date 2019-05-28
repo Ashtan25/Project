@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavBar" customModule="Employative" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="n7q-z5-OC3" id="pIF-jv-tFj"/>
+                <outlet property="searchButton" destination="eM4-Hm-cvg" id="AIo-x7-gRg"/>
+                <outlet property="titleLabel" destination="LPR-80-obB" id="Me9-Fo-WZR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7q-z5-OC3">
+                    <rect key="frame" x="0.0" y="31" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="lF6-dY-2JE"/>
+                    </constraints>
+                    <state key="normal" image="previous"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-80-obB">
+                    <rect key="frame" x="76" y="1" width="270" height="100"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-Hm-cvg">
+                    <rect key="frame" x="374" y="31" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="lIT-5B-w0m"/>
+                    </constraints>
+                    <state key="normal" image="search">
+                        <color key="titleColor" red="0.33333333329999998" green="0.90196078430000004" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eM4-Hm-cvg" firstAttribute="leading" secondItem="LPR-80-obB" secondAttribute="trailing" constant="28" id="29b-AA-8he"/>
+                <constraint firstItem="n7q-z5-OC3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="HU6-Xh-7ya"/>
+                <constraint firstAttribute="bottom" secondItem="LPR-80-obB" secondAttribute="bottom" constant="-1" id="IeH-Dm-IAX"/>
+                <constraint firstItem="n7q-z5-OC3" firstAttribute="top" secondItem="eM4-Hm-cvg" secondAttribute="top" id="KDn-pB-gqE"/>
+                <constraint firstAttribute="trailing" secondItem="eM4-Hm-cvg" secondAttribute="trailing" id="Kg6-zB-oN3"/>
+                <constraint firstItem="LPR-80-obB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="c69-sS-6EG"/>
+                <constraint firstItem="n7q-z5-OC3" firstAttribute="baseline" secondItem="eM4-Hm-cvg" secondAttribute="baseline" id="enZ-Rc-FEA"/>
+                <constraint firstAttribute="bottom" secondItem="n7q-z5-OC3" secondAttribute="bottom" constant="29" id="n77-af-Wjv"/>
+                <constraint firstItem="n7q-z5-OC3" firstAttribute="firstBaseline" secondItem="eM4-Hm-cvg" secondAttribute="firstBaseline" id="nhd-Wi-cJa"/>
+                <constraint firstItem="n7q-z5-OC3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pmN-nx-3dp"/>
+                <constraint firstItem="LPR-80-obB" firstAttribute="leading" secondItem="n7q-z5-OC3" secondAttribute="trailing" constant="36" id="qQo-vn-cZF"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-147.82608695652175" y="-223.66071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="previous" width="64" height="64"/>
+        <image name="search" width="64" height="64"/>
+    </resources>
+</document>
